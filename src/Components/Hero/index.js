@@ -4,7 +4,7 @@ import Container from "../Container";
 import Navigation from "../Navigation";
 import HeroImg from "../../assets/images/heroImg.png";
 import { ReactComponent as PlayButtonSvg } from "../../assets/images/play-button.svg";
-import Bg from "../../assets/images/bg.png";
+import Bg from "../../assets/images/bgHero.png";
 
 const Wrapper = styled.header`
   background: url("${Bg}") no-repeat center center, #f3fbff;
