@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "../Container/index";
+import { solution, company, products } from "./newsletterListItems";
 
 const Wrapper = styled.div`
   display: grid;
@@ -33,6 +34,22 @@ const NewsletterHeader = styled.h3`
   margin-bottom: 10px;
 `;
 
+const NewsletterList = styled.ul`
+  list-style: none;
+`;
+
+const NewsletterListItem = styled.li`
+  margin: 4px 0;
+  display: flex;
+  font-weight: ${({ theme }) => theme.font.weight.normal};
+  font-size: ${({ theme }) => theme.font.size.xxs};
+  text-align: center;
+
+  ${({ theme }) => theme.mq.md} {
+    text-align: left;
+  }
+`;
+
 const NewsletterParagraph = styled.p`
   margin: 4px 0;
   display: flex;
@@ -49,6 +66,7 @@ const NewsletterLabel = styled.label`
   display: block;
   position: relative;
 `;
+
 const NewsletterInput = styled.input`
   height: 100%;
 
@@ -80,23 +98,33 @@ const Newsletter = () => {
       <Wrapper>
         <NewsletterCard>
           <NewsletterHeader>Solution</NewsletterHeader>
-          <NewsletterParagraph>Project managment</NewsletterParagraph>
-          <NewsletterParagraph>Task managment</NewsletterParagraph>
-          <NewsletterParagraph>Sales tracking</NewsletterParagraph>
-          <NewsletterParagraph>Task distribution</NewsletterParagraph>
+          <NewsletterList>
+            {solution.map((el) => (
+              <NewsletterListItem>
+                <a href='#'>{el}</a>
+              </NewsletterListItem>
+            ))}
+          </NewsletterList>
         </NewsletterCard>
         <NewsletterCard>
           <NewsletterHeader>Company</NewsletterHeader>
-          <NewsletterParagraph>About</NewsletterParagraph>
-          <NewsletterParagraph>Services</NewsletterParagraph>
-          <NewsletterParagraph>Careers</NewsletterParagraph>
-          <NewsletterParagraph>Our Team</NewsletterParagraph>
+          <NewsletterList>
+            {company.map((el) => (
+              <NewsletterListItem>
+                <a href='#'>{el}</a>
+              </NewsletterListItem>
+            ))}
+          </NewsletterList>
         </NewsletterCard>
         <NewsletterCard>
           <NewsletterHeader>Products</NewsletterHeader>
-          <NewsletterParagraph>Personal</NewsletterParagraph>
-          <NewsletterParagraph>Business</NewsletterParagraph>
-          <NewsletterParagraph>Team</NewsletterParagraph>
+          <NewsletterList>
+            {products.map((el) => (
+              <NewsletterListItem>
+                <a href='#'>{el}</a>
+              </NewsletterListItem>
+            ))}
+          </NewsletterList>
         </NewsletterCard>
         <NewsletterCard>
           <NewsletterHeader>Stay Us</NewsletterHeader>
