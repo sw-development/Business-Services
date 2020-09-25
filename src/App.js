@@ -5,6 +5,7 @@ import News from "./Components/News";
 import Statistics from "./Components/Statistics";
 import Services from "./Components/Services";
 import Features from "./Components/Features";
+import Newsletter from "./Components/Newsletter";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Services />
       <Statistics />
       <News />
+      <Newsletter />
       <Footer />
     </Layout>
   );
