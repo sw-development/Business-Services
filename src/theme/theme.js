@@ -16,6 +16,8 @@ export const theme = {
     dodgerBlue: "#006AFF",
     royalBlue: "#2575E6",
     darkBlue: "#219DF5",
+    footerGray: "#0B1C52",
+    cardDescription: "#32363F",
   },
   font: {
     weight: {
