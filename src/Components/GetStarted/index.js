@@ -19,7 +19,7 @@ const GetStartedContent = styled.div`
 
 const InputsWrapper = styled.div`
   margin-top: 50px;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -45,8 +45,8 @@ const InputsWrapper = styled.div`
 const Input = styled.input`
   border: none;
   outline: none;
-  font-size: 1.4rem;
-  color: #a0a4ab;
+  font-size: ${({ theme }) => theme.font.size.xxs};
+  color: ${({ theme }) => theme.colors.mischka};
   margin-right: 10px;
   flex: 1 1;
 
@@ -55,11 +55,11 @@ const Input = styled.input`
   }
 
   ${({ theme }) => theme.mq.md} {
-    font-size: 1.6rem;
+    font-size: ${({ theme }) => theme.font.size.xs};
   }
 
   &::placeholder {
-    color: #a0a4ab;
+    color: ${({ theme }) => theme.colors.mischka};
   }
 `;
 
@@ -69,20 +69,20 @@ const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.lightBlue};
   border-radius: 15px;
   padding: 15px;
-  color: #1956cf;
-  font-weight: 700;
-  font-size: 1.4rem;
+  color: ${({ theme }) => theme.colors.denim};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  font-size: ${({ theme }) => theme.font.size.xxs};
   cursor: pointer;
   transition: all 0.3s ease-in;
 
   ${({ theme }) => theme.mq.xs} {
-    font-size: 1.6rem;
+    font-size: ${({ theme }) => theme.font.size.xs};
     padding: 20px 25px;
   }
 
   &:hover {
-    background-color: #ecf5ff;
-    color: #71bdf3;
+    background-color: ${({ theme }) => theme.colors.aliceBlue};
+    color: ${({ theme }) => theme.colors.mayaBlue};
   }
 `;
 
@@ -94,8 +94,8 @@ const GetStarted = () => {
           <Title>Get Started Instantly</Title>
 
           <InputsWrapper>
-            <Input placeholder='Enter Your Email Address' />
-            <Button type='button'>Request a quote</Button>
+            <Input placeholder="Enter Your Email Address" />
+            <Button type="button">Request a quote</Button>
           </InputsWrapper>
         </GetStartedContent>
       </Container>

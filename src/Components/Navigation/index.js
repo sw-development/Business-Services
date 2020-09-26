@@ -39,7 +39,8 @@ const NavBtnBox = styled.span`
 const NavBtnInner = styled.span`
   width: 100%;
   height: 3px;
-  background-color: ${({ navStatus }) => (navStatus ? "transparent" : "#111")};
+  background-color: ${({ navStatus }) =>
+    navStatus ? "transparent" : ({ theme }) => theme.colors.black};
   position: absolute;
   left: 0;
   top: 50%;
@@ -50,7 +51,7 @@ const NavBtnInner = styled.span`
   &::after {
     width: 100%;
     height: 3px;
-    background-color: #111;
+    background-color: ${({ theme }) => theme.colors.black};
     position: absolute;
     content: "";
     left: 0;
@@ -84,7 +85,7 @@ const NavList = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.white};
   z-index: 1;
   transform: ${({ navStatus }) =>
     navStatus ? "translateX(0)" : "translateX(100%)"};
@@ -111,11 +112,11 @@ const NavListItem = styled.li`
 
 const NavLink = styled.a`
   font-weight: ${({ theme }) => theme.font.weight.medium};
-  color: #051441;
+  color: ${({ theme }) => theme.colors.midnightExpress};
   transition: color 0.2s ease-in;
 
   &:hover {
-    color: #a0a4ab;
+    color: ${({ theme }) => theme.colors.mischka};
   }
 `;
 

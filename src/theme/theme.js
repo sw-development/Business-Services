@@ -9,16 +9,21 @@ const breakpoints = {
 export const theme = {
   colors: {
     white: "#FFF",
-    black: "#000",
-    grey: "#7D7D7D",
+    black: "#111",
     lightGray: "#ECF5FF",
-    solitude: "#ECF0FB",
     lightBlue: "#7ac8ff",
-    dodgerBlue: "#006AFF",
-    royalBlue: "#2575E6",
+    aliceBlue: "#ECF5FF",
+    mayaBlue: "#71BDF3",
+    snow: "#F9F9F9",
+    shark: "#32363F",
+    midnightExpress: "#051441",
+    mischka: "#A0A4AB",
+    denim: "#1956CF",
+    whiteIce: "#DDFCED",
+    whiteLilac: "#F4E7FB",
+    ghostWhite: "#FAFBFF",
     darkBlue: "#219DF5",
     navyBlue: "#0B1C52",
-    shark: "#32363F",
   },
   font: {
     weight: {

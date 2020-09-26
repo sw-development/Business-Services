@@ -20,7 +20,7 @@ const SubHeader = styled.p`
   font-weight: ${({ theme }) => theme.font.weight.medium};
   font-size: ${({ theme }) => theme.font.size.xxs};
   text-align: center;
-  color: #051441;
+  color: ${({ theme }) => theme.colors.midnightExpress};
   margin-bottom: 10px;
 `;
 
@@ -44,7 +44,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #32363f;
+  color: ${({ theme }) => theme.colors.shark};
   margin-bottom: 50px;
 
   ${({ theme }) => theme.mq.md} {
@@ -69,20 +69,20 @@ const Card = styled.div`
 
 const CardPrice = styled.span`
   font-size: 6rem;
-  font-weight: 700;
+  font-weight: ${({ theme }) => theme.font.weight.bold};
   margin-bottom: 5px;
   ${({ main }) => (main ? "color: #219DF5;" : null)}
 `;
 
 const CardCategory = styled.span`
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.font.size.xs};
+  font-weight: ${({ theme }) => theme.font.weight.semibold};
   margin-bottom: 5px;
 `;
 
 const CardTheme = styled.span`
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: ${({ theme }) => theme.font.size.md};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
   margin-bottom: 25px;
   ${({ main }) => (main ? "color: #219DF5;" : null)}
 `;
@@ -97,24 +97,36 @@ const CardList = styled.ul`
 
 const CardListItem = styled.li`
   margin-bottom: 10px;
-  font-size: 1.6rem;
+  font-size: ${({ theme }) => theme.font.size.xs};
   text-align: center;
 `;
 
 const CardButton = styled.button`
   border: none;
   outline: none;
-  background-color: ${({ main }) => (main ? "#7AC8FF" : "#ecf5ff")};
+  background-color: ${({ main }) =>
+    main
+      ? ({ theme }) => theme.colors.mayaBlue
+      : ({ theme }) => theme.colors.aliceBlue};
   border-radius: 30px;
   padding: 15px 25px;
-  color: ${({ main }) => (main ? "#1956CF" : "#71bdf3")};
-  font-weight: 700;
+  color: ${({ main }) =>
+    main
+      ? ({ theme }) => theme.colors.denim
+      : ({ theme }) => theme.colors.mayaBlue};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
   cursor: pointer;
   transition: all 0.3s ease-in;
 
   &:hover {
-    background-color: ${({ main }) => (main ? "#ecf5ff" : "#7AC8FF")};
-    color: ${({ main }) => (main ? "#71bdf3" : "#1956CF")};
+    background-color: ${({ main }) =>
+      main
+        ? ({ theme }) => theme.colors.aliceBlue
+        : ({ theme }) => theme.colors.mayaBlue};
+    color: ${({ main }) =>
+      main
+        ? ({ theme }) => theme.colors.mayaBlue
+        : ({ theme }) => theme.colors.denim};
   }
 `;
 

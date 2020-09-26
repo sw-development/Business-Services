@@ -76,7 +76,7 @@ const NewsletterInput = styled.input`
   height: 100%;
 
   padding: 10px 10px;
-  background-color: #f9f9f9;
+  background-color: ${({ theme }) => theme.colors.snow};
   border: none;
 `;
 

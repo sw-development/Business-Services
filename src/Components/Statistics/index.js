@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #fafbff;
+  background-color: ${({ theme }) => theme.colors.ghostWhite};
   padding: 50px 0;
 
   ${({ theme }) => theme.mq.sm} {
@@ -46,7 +46,7 @@ const StatisticHeader = styled.h2`
 const StatiscticParagraph = styled.p`
   font-size: ${({ theme }) => theme.font.size.xs};
   font-weight: ${({ theme }) => theme.font.weight.medium};
-  color: #a0a4ab;
+  color: ${({ theme }) => theme.colors.mischka};
   height: 100%;
   text-align: center;
 `;

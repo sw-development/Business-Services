@@ -12,7 +12,7 @@ const SubHeader = styled.p`
   font-weight: ${({ theme }) => theme.font.weight.medium};
   font-size: ${({ theme }) => theme.font.size.xxs};
   text-align: center;
-  color: #051441;
+  color: ${({ theme }) => theme.colors.midnightExpress};
   margin-bottom: 10px;
 `;
 
@@ -20,7 +20,7 @@ const Paragraph = styled.p`
   text-align: center;
   font-weight: ${({ theme }) => theme.font.weight.light};
   font-size: ${({ theme }) => theme.font.size.sm};
-  color: #051441;
+  color: ${({ theme }) => theme.colors.midnightExpress};
 `;
 
 const Features = () => {

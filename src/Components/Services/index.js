@@ -48,11 +48,11 @@ const ServicesLogo = styled.div`
   background-color: #fef8e2;
 
   &.financialLogo {
-    background-color: #ddfced;
+    background-color: ${({ theme }) => theme.colors.whiteIce};
   }
 
   &.marketingLogo {
-    background-color: #f4e7fb;
+    background-color: ${({ theme }) => theme.colors.whiteLilac};
   }
 `;
 
@@ -63,7 +63,7 @@ const ServicesCircleLogo = styled.div`
 `;
 
 const ServicesLogoDesc = styled.p`
-  color: #9ca0aa;
+  color: ${({ theme }) => theme.colors.mischka};
   font-size: ${({ theme }) => theme.font.size.xxs};
   font-weight: ${({ theme }) => theme.font.weight.light};
   text-align: center;

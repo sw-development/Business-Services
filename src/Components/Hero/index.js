@@ -26,17 +26,17 @@ const Content = styled.div`
 `;
 
 const Heading = styled.h1`
-  font-size: 3rem;
-  color: #051441;
+  font-size: ${({ theme }) => theme.font.size.md};
+  color: ${({ theme }) => theme.colors.midnightExpress};
   max-width: 650px;
   text-align: center;
 
   ${({ theme }) => theme.mq.xs} {
-    font-size: 4rem;
+    font-size: ${({ theme }) => theme.font.size.lg};
   }
 
   ${({ theme }) => theme.mq.lg} {
-    font-size: 5rem;
+    font-size: ${({ theme }) => theme.font.size.xlg};
   }
 `;
 
@@ -50,20 +50,20 @@ const PrimaryButton = styled.button`
   outline: none;
   border: none;
   border-radius: 30px;
-  background-color: #219df5;
+  background-color: ${({ theme }) => theme.colors.darkBlue};
   border: 1px solid transparent;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
   padding: 15px 20px;
-  font-weight: 600;
-  font-size: 1.4rem;
+  font-weight: ${({ theme }) => theme.font.weight.semibold};
+  font-size: ${({ theme }) => theme.font.size.xxs};
   cursor: pointer;
   transition: all 0.3s ease-in;
   margin-right: 25px;
 
   &:hover {
-    background-color: white;
-    border: 1px solid #219df5;
-    color: #219df5;
+    background-color: ${({ theme }) => theme.colors.white};
+    border: 1px solid ${({ theme }) => theme.colors.darkBlue};
+    color: ${({ theme }) => theme.colors.darkBlue};
   }
 `;
 
@@ -73,8 +73,8 @@ const SecondaryButton = styled.button`
   background-color: transparent;
   outline: none;
   border: none;
-  color: #111;
-  font-size: 1.4rem;
+  color: ${({ theme }) => theme.colors.black};
+  font-size: ${({ theme }) => theme.font.size.xxs};
   cursor: pointer;
 
   &:hover {
@@ -101,8 +101,8 @@ const Hero = () => (
         <Content>
           <Heading>Get Business Solutions With Solvency</Heading>
           <ActionsWrapper>
-            <PrimaryButton type='button'>Explore More</PrimaryButton>
-            <SecondaryButton type='button'>
+            <PrimaryButton type="button">Explore More</PrimaryButton>
+            <SecondaryButton type="button">
               See Live Demo <PlayButton />
             </SecondaryButton>
           </ActionsWrapper>
