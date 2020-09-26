@@ -13,11 +13,12 @@ export const theme = {
     grey: "#7D7D7D",
     lightGray: "#ECF5FF",
     solitude: "#ECF0FB",
+    lightBlue: "#7ac8ff",
     dodgerBlue: "#006AFF",
     royalBlue: "#2575E6",
     darkBlue: "#219DF5",
-    footerGray: "#0B1C52",
-    cardDescription: "#32363F",
+    navyBlue: "#0B1C52",
+    shark: "#32363F",
   },
   font: {
     weight: {

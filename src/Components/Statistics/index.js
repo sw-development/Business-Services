@@ -35,6 +35,7 @@ const StatisticHeader = styled.h2`
   font-size: ${({ theme }) => theme.font.size.lg};
   font-weight: ${({ theme }) => theme.font.weight.xbold};
   margin-bottom: 5px;
+  height: 100%;
   text-align: center;
 `;
 
@@ -42,6 +43,7 @@ const StatiscticParagraph = styled.p`
   font-size: ${({ theme }) => theme.font.size.xs};
   font-weight: ${({ theme }) => theme.font.weight.medium};
   color: #a0a4ab;
+  height: 100%;
   text-align: center;
 `;
 

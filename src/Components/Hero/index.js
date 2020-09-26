@@ -97,14 +97,16 @@ const Hero = () => (
     <Container>
       <HeroContent>
         <Navigation />
+
         <Content>
           <Heading>Get Business Solutions With Solvency</Heading>
           <ActionsWrapper>
-            <PrimaryButton type="button">Explore More</PrimaryButton>
-            <SecondaryButton type="button">
+            <PrimaryButton type='button'>Explore More</PrimaryButton>
+            <SecondaryButton type='button'>
               See Live Demo <PlayButton />
             </SecondaryButton>
           </ActionsWrapper>
+
           <Img src={HeroImg} />
         </Content>
       </HeroContent>

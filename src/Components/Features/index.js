@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Container from "../Container/index";
 import Title from "../Title/index";
 
 const Wrapper = styled.div`
@@ -26,13 +25,11 @@ const Paragraph = styled.p`
 
 const Features = () => {
   return (
-    <Container>
-      <Wrapper>
-        <SubHeader>Features</SubHeader>
-        <Title>Our Provided Features</Title>
-        <Paragraph>Business Services</Paragraph>
-      </Wrapper>
-    </Container>
+    <Wrapper>
+      <SubHeader>Features</SubHeader>
+      <Title>Our Provided Features</Title>
+      <Paragraph>Business Services</Paragraph>
+    </Wrapper>
   );
 };
 

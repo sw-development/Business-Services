@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { ReactComponent as LogoSvg } from "../../assets/images/Logo.svg";
+import { ReactComponent as Basket } from "../../assets/images/Basket.svg";
+import { ReactComponent as Search } from "../../assets/images/search.svg";
 
 const Nav = styled.nav`
   padding: 15px 0;
@@ -9,7 +11,7 @@ const Nav = styled.nav`
   justify-content: space-between;
 `;
 
-const Logo = styled(LogoSvg)`
+export const Logo = styled(LogoSvg)`
   width: 100px;
   height: 50px;
 `;
@@ -102,11 +104,27 @@ const NavList = styled.ul`
 
 const NavListItem = styled.li`
   margin-bottom: 10px;
+  text-transform: uppercase;
 
   ${({ theme }) => theme.mq.md} {
     margin: 0 0 0 15px;
   }
 `;
+
+const NavActions = styled.div`
+  display: none;
+
+  ${({ theme }) => theme.mq.md} {
+    display: inline-block;
+  }
+`;
+
+const NavLink = styled.a`
+  font-family: "Roboto";
+  font-weight: ${({ theme }) => theme.font.weight.medium};
+`;
+
+const menuItems = ["Home", "Services", "Pricing", "Blog"];
 
 const Navigation = () => {
   const [navStatus, setNavStatus] = useState(false);
@@ -118,12 +136,19 @@ const Navigation = () => {
           <NavBtnInner navStatus={navStatus} />
         </NavBtnBox>
       </NavBtn>
+
       <NavList navStatus={navStatus}>
-        <NavListItem>Home</NavListItem>
-        <NavListItem>Services</NavListItem>
-        <NavListItem>Pricing</NavListItem>
-        <NavListItem>Blog</NavListItem>
+        {menuItems.map((item, index) => (
+          <NavListItem key={index}>
+            <NavLink href='#'>{item}</NavLink>
+          </NavListItem>
+        ))}
       </NavList>
+
+      <NavActions>
+        <Search />
+        <Basket />
+      </NavActions>
     </Nav>
   );
 };
