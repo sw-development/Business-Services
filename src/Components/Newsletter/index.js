@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(4, 1fr);
   align-items: center;
-  padding: 20px 0;
+  padding: 100px 0;
 
   ${({ theme }) => theme.mq.md} {
     grid-template-columns: repeat(4, 1fr);
@@ -101,7 +101,7 @@ const Newsletter = () => {
           <NewsletterList>
             {solution.map((el) => (
               <NewsletterListItem>
-                <a href='#'>{el}</a>
+                <a href="#">{el}</a>
               </NewsletterListItem>
             ))}
           </NewsletterList>
@@ -111,7 +111,7 @@ const Newsletter = () => {
           <NewsletterList>
             {company.map((el) => (
               <NewsletterListItem>
-                <a href='#'>{el}</a>
+                <a href="#">{el}</a>
               </NewsletterListItem>
             ))}
           </NewsletterList>
@@ -121,7 +121,7 @@ const Newsletter = () => {
           <NewsletterList>
             {products.map((el) => (
               <NewsletterListItem>
-                <a href='#'>{el}</a>
+                <a href="#">{el}</a>
               </NewsletterListItem>
             ))}
           </NewsletterList>
@@ -133,14 +133,14 @@ const Newsletter = () => {
             the majority have suffered alteration in some form by injected.
           </NewsletterParagraph>
           <NewsletterParagraph>
-            <NewsletterLabel htmlFor='email'>
+            <NewsletterLabel htmlFor="email">
               <NewsletterInput
-                id='email'
-                name='email'
-                placeholder='Enter your email address'
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
               />
             </NewsletterLabel>
-            <NewsletterBtn placeholder='Click to subscribe'>
+            <NewsletterBtn placeholder="Click to subscribe">
               Subscribe
             </NewsletterBtn>
           </NewsletterParagraph>
