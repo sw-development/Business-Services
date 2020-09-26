@@ -65,23 +65,23 @@ const Footer = () => {
 
         <SocialIcons>
           <SocialCircle>
-            <img src={fbAngle} alt='facebook logo' />
-            <SocialLink href='https://facebook.com' target='_blank'>
-              <img src={fbLogo} alt='facebook logo' />
+            <img src={fbAngle} alt="facebook logo" />
+            <SocialLink href="https://facebook.com" target="_blank">
+              <img src={fbLogo} alt="facebook logo" />
             </SocialLink>
           </SocialCircle>
 
           <SocialCircle>
-            <img src={twAngle} alt='twitter logo' />
-            <SocialLink href='https://twitter.com' target='_blank'>
-              <img src={twLogo} alt='twitter logo' />
+            <img src={twAngle} alt="twitter logo" />
+            <SocialLink href="https://twitter.com" target="_blank">
+              <img src={twLogo} alt="twitter logo" />
             </SocialLink>
           </SocialCircle>
 
           <SocialCircle>
-            <img src={pintAngle} alt='Pinterest logo' />
-            <SocialLink href='https://pinterest.com' target='_blank'>
-              <img src={pintLogo} alt='Pinterest logo' />
+            <img src={pintAngle} alt="Pinterest logo" />
+            <SocialLink href="https://pinterest.com" target="_blank">
+              <img src={pintLogo} alt="Pinterest logo" />
             </SocialLink>
           </SocialCircle>
         </SocialIcons>

@@ -107,7 +107,7 @@ const Hero = () => (
             </SecondaryButton>
           </ActionsWrapper>
 
-          <Img src={HeroImg} />
+          <Img src={HeroImg} alt="Computer" />
         </Content>
       </HeroContent>
     </Container>
