@@ -6,8 +6,7 @@ import Bg from "../../assets/images/bgGetStarted.png";
 import WorldSvg from "../../assets/images/world.svg";
 
 const Wrapper = styled.div`
-  background: url("${WorldSvg}") no-repeat center center,
-    url("${Bg}") no-repeat center center;
+  background: url("${WorldSvg}") no-repeat center, url("${Bg}") no-repeat center;
   background-size: contain;
   padding: 100px 0;
 `;

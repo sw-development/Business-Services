@@ -7,12 +7,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
-  width: 100%;
-
-  ${({ theme }) => theme.mq.md} {
-    padding: 60px 0;
-  }
 `;
 
 const SubHeader = styled.p`

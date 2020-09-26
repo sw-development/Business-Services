@@ -4,14 +4,10 @@ import Container from "../Container/index";
 
 const Wrapper = styled.div`
   width: 100%;
-  padding: 25px 0;
+  padding: 100px 0;
   display: flex;
   align-items: center;
   background-color: #fafbff;
-
-  ${({ theme }) => theme.mq.md} {
-    padding: 50px 0;
-  }
 `;
 
 const StatWrapper = styled.div`
@@ -36,15 +32,15 @@ const Statisctic = styled.div`
 `;
 
 const StatisticHeader = styled.h2`
-  font-size: ${({ theme }) => theme.font.size.sm};
-  font-size: ${({ theme }) => theme.font.weight.xbold};
+  font-size: ${({ theme }) => theme.font.size.lg};
+  font-weight: ${({ theme }) => theme.font.weight.xbold};
   margin-bottom: 5px;
   text-align: center;
 `;
 
 const StatiscticParagraph = styled.p`
-  font-size: ${({ theme }) => theme.font.size.xxs};
-  font-size: ${({ theme }) => theme.font.weight.light};
+  font-size: ${({ theme }) => theme.font.size.xs};
+  font-weight: ${({ theme }) => theme.font.weight.medium};
   color: #a0a4ab;
   text-align: center;
 `;

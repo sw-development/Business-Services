@@ -8,16 +8,19 @@ import service1 from "../../assets/images/services1.png";
 import service2 from "../../assets/images/services2.png";
 import service3 from "../../assets/images/services3.png";
 
+import { ReactComponent as PieChart } from "../../assets/images/pie-chart.svg";
+import { ReactComponent as Chart } from "../../assets/images/chart.svg";
+import { ReactComponent as Megaphone } from "../../assets/images/megaphone.svg";
+
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  padding-bottom: 40px;
+  padding: 100px 0;
 
   ${({ theme }) => theme.mq.md} {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    padding-bottom: 120px;
   }
 `;
 
@@ -68,9 +71,9 @@ const Services = () => {
       <Wrapper>
         <Service>
           <ServicesLogo>
-            <img src={ellipse1} alt='ellipse' />
+            <img src={ellipse1} alt="ellipse" />
             <ServicesCircleLogo>
-              <img src={service1} alt='service' />
+              <PieChart />
             </ServicesCircleLogo>
           </ServicesLogo>
           <ServicesLogoDesc>Market Research</ServicesLogoDesc>
@@ -80,9 +83,9 @@ const Services = () => {
         </Service>
         <Service>
           <ServicesLogo>
-            <img src={ellipse2} alt='ellipse' />
+            <img src={ellipse2} alt="ellipse" />
             <ServicesCircleLogo>
-              <img src={service2} alt='service' />
+              <Chart />
             </ServicesCircleLogo>
           </ServicesLogo>
           <ServicesLogoDesc>Financial Services</ServicesLogoDesc>
@@ -92,9 +95,9 @@ const Services = () => {
         </Service>
         <Service>
           <ServicesLogo>
-            <img src={ellipse3} alt='ellipse' />
+            <img src={ellipse3} alt="ellipse" />
             <ServicesCircleLogo>
-              <img src={service3} alt='service' />
+              <Megaphone />
             </ServicesCircleLogo>
           </ServicesLogo>
           <ServicesLogoDesc>Online Marketing</ServicesLogoDesc>
