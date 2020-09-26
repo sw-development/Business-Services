@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import companyLogo from "../../assets/images/Solvency.png";
-import companyLogoCircle from "../../assets/images/Ellipse 7.png";
+import { ReactComponent as LogoSvg } from "../../assets/images/Logo.svg";
 import fbLogo from "../../assets/images/fb.png";
 import twLogo from "../../assets/images/tw.png";
 import pintLogo from "../../assets/images/pint.png";
@@ -21,25 +20,6 @@ const Wrapper = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
-`;
-
-const LogoWrapper = styled.div`
-  display: flex;
-  width: 100%;
-  ${({ theme }) => theme.mq.md} {
-    width: fit-content;
-  }
-`;
-
-const Logo = styled.div`
-  display: flex;
-  content: url(${companyLogo}), url(${companyLogoCircle});
-  position: relative;
-  img:nth-child(2) {
-    position: absolute;
-    left: 10px;
-    top: 3px;
   }
 `;
 
@@ -78,30 +58,26 @@ const Footer = () => {
   return (
     <Container>
       <Wrapper>
-        <LogoWrapper>
-          <Logo>
-            <img src={companyLogoCircle} alt='Company Logo Circle' />
-            <img src={companyLogo} alt='Company Logo' />
-          </Logo>
-        </LogoWrapper>
+        <LogoSvg />
+
         <Copyrights>Copyright @2020. All rights reserved</Copyrights>
         <SocialIcons>
           <SocialCircle>
-            <img src={fbAngle} alt='facebook logo' />
+            <img src={fbAngle} alt="facebook logo" />
             <SocialCircleIcon>
-              <img src={fbLogo} alt='facebook logo' />
+              <img src={fbLogo} alt="facebook logo" />
             </SocialCircleIcon>
           </SocialCircle>
           <SocialCircle>
-            <img src={twAngle} alt='twitter logo' />
+            <img src={twAngle} alt="twitter logo" />
             <SocialCircleIcon>
-              <img src={twLogo} alt='twitter logo' />
+              <img src={twLogo} alt="twitter logo" />
             </SocialCircleIcon>
           </SocialCircle>
           <SocialCircle>
-            <img src={pintAngle} alt='Pinterest logo' />
+            <img src={pintAngle} alt="Pinterest logo" />
             <SocialCircleIcon>
-              <img src={pintLogo} alt='Pinterest logo' />
+              <img src={pintLogo} alt="Pinterest logo" />
             </SocialCircleIcon>
           </SocialCircle>
         </SocialIcons>

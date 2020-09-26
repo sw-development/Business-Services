@@ -1,10 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "../Container/index";
+import Bg from "../../assets/images/bgNews.png";
 import news1 from "../../assets/images/news1.png";
 import news2 from "../../assets/images/news2.png";
 import news3 from "../../assets/images/news3.png";
 import Title from "../Title/index";
+
+const NewsWrapper = styled.div`
+  padding: 100px 0;
+  background: url("${Bg}") no-repeat center;
+`;
 
 const Wrapper = styled.div`
   display: grid;
@@ -27,6 +33,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+  background-color: #fff;
   transition: 0.3s all linear;
   margin: 20px;
   padding: 20px;
@@ -82,62 +89,64 @@ const CardContentDescription = styled.p`
 
 const News = () => {
   return (
-    <Container>
-      <SubHeader>Our blog</SubHeader>
-      <Title>Our Companies News</Title>
-      <Wrapper>
-        <Card>
-          <CardProfile>
-            <CardProfilePhoto>
-              <img src={news1} alt='news one' />
-            </CardProfilePhoto>
-            <CardPerson>
-              <CardPersonName>Adam Smith</CardPersonName>
-              <CardDate>08 Aug 2019</CardDate>
-            </CardPerson>
-          </CardProfile>
-          <CardTitle>Saas Lending Solution for Loans company</CardTitle>
-          <CardContentDescription>
-            These folk are energized with a complex problem and breaking
-            grappling ullamco with a complex problem . . . . .
-          </CardContentDescription>
-        </Card>
-        <Card>
-          <CardProfile>
-            <CardProfilePhoto>
-              <img src={news2} alt='news two' />
-            </CardProfilePhoto>
-            <CardPerson>
-              <CardPersonName>Creamer Jens</CardPersonName>
-              <CardDate>09 May 2019</CardDate>
-            </CardPerson>
-          </CardProfile>
-          <CardTitle>Build your audience and grow your brand</CardTitle>
-          <CardContentDescription>
-            These folk are energized with a complex problem and breaking
-            grappling ullamco with a complex problem . . . . .
-          </CardContentDescription>
-        </Card>
-        <Card>
-          <CardProfile>
-            <CardProfilePhoto>
-              <img src={news3} alt='news three' />
-            </CardProfilePhoto>
-            <CardPerson>
-              <CardPersonName>Mack Jones</CardPersonName>
-              <CardDate>13 Jan 2019</CardDate>
-            </CardPerson>
-          </CardProfile>
-          <CardTitle>
-            Learn more about our full stack of brand building tools
-          </CardTitle>
-          <CardContentDescription>
-            These folk are energized with a complex problem and breaking
-            grappling ullamco with a complex problem . . . . .
-          </CardContentDescription>
-        </Card>
-      </Wrapper>
-    </Container>
+    <NewsWrapper>
+      <Container>
+        <SubHeader>Our blog</SubHeader>
+        <Title>Our Companies News</Title>
+        <Wrapper>
+          <Card>
+            <CardProfile>
+              <CardProfilePhoto>
+                <img src={news1} alt="news one" />
+              </CardProfilePhoto>
+              <CardPerson>
+                <CardPersonName>Adam Smith</CardPersonName>
+                <CardDate>08 Aug 2019</CardDate>
+              </CardPerson>
+            </CardProfile>
+            <CardTitle>Saas Lending Solution for Loans company</CardTitle>
+            <CardContentDescription>
+              These folk are energized with a complex problem and breaking
+              grappling ullamco with a complex problem . . . . .
+            </CardContentDescription>
+          </Card>
+          <Card>
+            <CardProfile>
+              <CardProfilePhoto>
+                <img src={news2} alt="news two" />
+              </CardProfilePhoto>
+              <CardPerson>
+                <CardPersonName>Creamer Jens</CardPersonName>
+                <CardDate>09 May 2019</CardDate>
+              </CardPerson>
+            </CardProfile>
+            <CardTitle>Build your audience and grow your brand</CardTitle>
+            <CardContentDescription>
+              These folk are energized with a complex problem and breaking
+              grappling ullamco with a complex problem . . . . .
+            </CardContentDescription>
+          </Card>
+          <Card>
+            <CardProfile>
+              <CardProfilePhoto>
+                <img src={news3} alt="news three" />
+              </CardProfilePhoto>
+              <CardPerson>
+                <CardPersonName>Mack Jones</CardPersonName>
+                <CardDate>13 Jan 2019</CardDate>
+              </CardPerson>
+            </CardProfile>
+            <CardTitle>
+              Learn more about our full stack of brand building tools
+            </CardTitle>
+            <CardContentDescription>
+              These folk are energized with a complex problem and breaking
+              grappling ullamco with a complex problem . . . . .
+            </CardContentDescription>
+          </Card>
+        </Wrapper>
+      </Container>
+    </NewsWrapper>
   );
 };
 
