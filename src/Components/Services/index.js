@@ -21,7 +21,6 @@ const GridWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  padding: 50px 0;
 
   ${({ theme }) => theme.mq.md} {
     grid-template-columns: repeat(3, 1fr);
