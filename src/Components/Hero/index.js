@@ -26,10 +26,18 @@ const Content = styled.div`
 `;
 
 const Heading = styled.h1`
-  font-size: 5rem;
+  font-size: 3rem;
   color: #051441;
   max-width: 650px;
   text-align: center;
+
+  ${({ theme }) => theme.mq.xs} {
+    font-size: 4rem;
+  }
+
+  ${({ theme }) => theme.mq.lg} {
+    font-size: 5rem;
+  }
 `;
 
 const ActionsWrapper = styled.div`

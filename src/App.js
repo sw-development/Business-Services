@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import Statistics from "./components/Statistics";
 import Pricing from "./components/Pricing";
 import News from "./components/News";
+import GetStarted from "./components/GetStarted";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Statistics />
       <Pricing />
       <News />
+      <GetStarted />
       <Footer />
     </Layout>
   );

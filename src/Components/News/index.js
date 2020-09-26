@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(1, 1fr);
+  padding: 100px 0;
 
   ${({ theme }) => theme.mq.md} {
     grid-template-rows: repeat(1, 1fr);
@@ -89,7 +90,7 @@ const News = () => {
         <Card>
           <CardProfile>
             <CardProfilePhoto>
-              <img src={news1} alt='news one' />
+              <img src={news1} alt="news one" />
             </CardProfilePhoto>
             <CardPerson>
               <CardPersonName>Adam Smith</CardPersonName>
@@ -105,7 +106,7 @@ const News = () => {
         <Card>
           <CardProfile>
             <CardProfilePhoto>
-              <img src={news2} alt='news two' />
+              <img src={news2} alt="news two" />
             </CardProfilePhoto>
             <CardPerson>
               <CardPersonName>Creamer Jens</CardPersonName>
@@ -121,7 +122,7 @@ const News = () => {
         <Card>
           <CardProfile>
             <CardProfilePhoto>
-              <img src={news3} alt='news three' />
+              <img src={news3} alt="news three" />
             </CardProfilePhoto>
             <CardPerson>
               <CardPersonName>Mack Jones</CardPersonName>
