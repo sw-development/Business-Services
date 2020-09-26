@@ -2,13 +2,19 @@ import React from "react";
 import Container from "../Container/index";
 import styled from "styled-components";
 import Features from "../Features";
-
+import Bg from "../../assets/images/bgServices.png";
 import { ReactComponent as PieChart } from "../../assets/images/pie-chart.svg";
 import { ReactComponent as Chart } from "../../assets/images/chart.svg";
 import { ReactComponent as Megaphone } from "../../assets/images/megaphone.svg";
 
 const Wrapper = styled.div`
-  padding: 100px 0;
+  padding: 50px 0;
+  background: url("${Bg}") no-repeat center center;
+  background-size: contain;
+
+  ${({ theme }) => theme.mq.sm} {
+    padding: 100px 0;
+  }
 `;
 
 const GridWrapper = styled.div`
@@ -94,7 +100,7 @@ const Services = () => {
             </ServicesDescription>
           </Service>
           <Service>
-            <ServicesLogo className='financialLogo'>
+            <ServicesLogo className="financialLogo">
               <ServicesCircleLogo>
                 <Chart />
               </ServicesCircleLogo>
@@ -105,7 +111,7 @@ const Services = () => {
             </ServicesDescription>
           </Service>
           <Service>
-            <ServicesLogo className='marketingLogo'>
+            <ServicesLogo className="marketingLogo">
               <ServicesCircleLogo>
                 <Megaphone />
               </ServicesCircleLogo>

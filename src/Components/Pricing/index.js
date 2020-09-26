@@ -7,7 +7,11 @@ import Bg from "../../assets/images/bgPricing.png";
 const Wrapper = styled.div`
   background: url("${Bg}") no-repeat center center;
   background-size: cover;
-  padding: 100px 0;
+  padding: 50px 0;
+
+  ${({ theme }) => theme.mq.sm} {
+    padding: 100px 0;
+  }
 `;
 
 const PricingContent = styled.div``;
@@ -100,13 +104,18 @@ const CardListItem = styled.li`
 const CardButton = styled.button`
   border: none;
   outline: none;
-  background-color: ${({ main }) =>
-    main ? `${({ theme }) => theme.colors.lightBlue}` : "#ecf5ff"};
+  background-color: ${({ main }) => (main ? "#7AC8FF" : "#ecf5ff")};
   border-radius: 30px;
   padding: 15px 25px;
   color: ${({ main }) => (main ? "#1956CF" : "#71bdf3")};
   font-weight: 700;
   cursor: pointer;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    background-color: ${({ main }) => (main ? "#ecf5ff" : "#7AC8FF")};
+    color: ${({ main }) => (main ? "#71bdf3" : "#1956CF")};
+  }
 `;
 
 const Pricing = () => {
@@ -127,7 +136,7 @@ const Pricing = () => {
                 <CardListItem>Facebook & Instagram Ads</CardListItem>
                 <CardListItem>Order Notifications</CardListItem>
               </CardList>
-              <CardButton type='button'>Choose Plan</CardButton>
+              <CardButton type="button">Choose Plan</CardButton>
             </Card>
             <Card main={true}>
               <CardPrice main={true}>49</CardPrice>
@@ -141,7 +150,7 @@ const Pricing = () => {
                 <CardListItem>Landing Pages</CardListItem>
                 <CardListItem>SEO Optimization</CardListItem>
               </CardList>
-              <CardButton type='button' main={true}>
+              <CardButton type="button" main={true}>
                 Choose Plan
               </CardButton>
             </Card>
@@ -155,7 +164,7 @@ const Pricing = () => {
                 <CardListItem>Facebook & Instagram Ads</CardListItem>
                 <CardListItem>Order Notifications</CardListItem>
               </CardList>
-              <CardButton type='button'>Choose Plan</CardButton>
+              <CardButton type="button">Choose Plan</CardButton>
             </Card>
           </Cards>
         </PricingContent>

@@ -1,13 +1,13 @@
 import React from "react";
 import Layout from "./Layout/layout";
-import Hero from "./Components/Hero";
-import Services from "./Components/Services";
-import Statistics from "./Components/Statistics";
-import Pricing from "./Components/Pricing";
-import News from "./Components/News";
-import GetStarted from "./Components/GetStarted";
-import Newsletter from "./Components/Newsletter";
-import Footer from "./Components/Footer";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import Statistics from "./components/Statistics";
+import Pricing from "./components/Pricing";
+import News from "./components/News";
+import GetStarted from "./components/GetStarted";
+import Newsletter from "./components/Newsletter";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (

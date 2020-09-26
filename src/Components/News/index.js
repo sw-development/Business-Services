@@ -7,10 +7,11 @@ import { Persons } from "./persons";
 import { renderPersons } from "./renderPersons";
 
 const NewsWrapper = styled.div`
-  padding: 20px 0;
   background: url("${Bg}") no-repeat center;
 
-  ${({ theme }) => theme.mq.md} {
+  padding: 50px 0;
+
+  ${({ theme }) => theme.mq.sm} {
     padding: 100px 0;
   }
 `;

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { ReactComponent as LogoSvg } from "../../assets/images/Logo.svg";
-import { ReactComponent as Basket } from "../../assets/images/Basket.svg";
-import { ReactComponent as Search } from "../../assets/images/search.svg";
 
 const Nav = styled.nav`
   padding: 15px 0;
@@ -111,17 +109,14 @@ const NavListItem = styled.li`
   }
 `;
 
-const NavActions = styled.div`
-  display: none;
-
-  ${({ theme }) => theme.mq.md} {
-    display: inline-block;
-  }
-`;
-
 const NavLink = styled.a`
-  font-family: "Roboto";
   font-weight: ${({ theme }) => theme.font.weight.medium};
+  color: #051441;
+  transition: color 0.2s ease-in;
+
+  &:hover {
+    color: #a0a4ab;
+  }
 `;
 
 const menuItems = ["Home", "Services", "Pricing", "Blog"];
@@ -140,15 +135,10 @@ const Navigation = () => {
       <NavList navStatus={navStatus}>
         {menuItems.map((item, index) => (
           <NavListItem key={index}>
-            <NavLink href='#'>{item}</NavLink>
+            <NavLink href="#">{item}</NavLink>
           </NavListItem>
         ))}
       </NavList>
-
-      <NavActions>
-        <Search />
-        <Basket />
-      </NavActions>
     </Nav>
   );
 };

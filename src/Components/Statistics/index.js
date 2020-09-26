@@ -4,10 +4,14 @@ import Container from "../Container/index";
 
 const Wrapper = styled.div`
   width: 100%;
-  padding: 100px 0;
   display: flex;
   align-items: center;
   background-color: #fafbff;
+  padding: 50px 0;
+
+  ${({ theme }) => theme.mq.sm} {
+    padding: 100px 0;
+  }
 `;
 
 const StatWrapper = styled.div`

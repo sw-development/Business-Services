@@ -48,13 +48,13 @@ const CardDate = styled.p`
 
 const CardTitle = styled.p`
   margin: 7px 0;
-  font-weight: ${({ theme }) => theme.font.weight.bold};
+  font-weight: ${({ theme }) => theme.font.weight.medium};
   font-size: ${({ theme }) => theme.font.size.sm};
 `;
 
 const CardContentDescription = styled.p`
   margin-top: 10px;
-  font-weight: ${({ theme }) => theme.font.weight.medium};
+  font-weight: ${({ theme }) => theme.font.weight.light};
   font-size: ${({ theme }) => theme.font.size.xs};
   color: ${({ theme }) => theme.colors.cardDescription};
 `;
@@ -66,7 +66,7 @@ export const renderPersons = (arr) => {
       <Card key={index}>
         <CardProfile>
           <CardProfilePhoto>
-            <img src={img} alt='news' />
+            <img src={img} alt="news" />
           </CardProfilePhoto>
           <CardPerson>
             <CardPersonName>{name}</CardPersonName>

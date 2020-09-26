@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(4, 1fr);
   align-items: center;
-  padding: 40px 0;
+  padding: 50px 0;
 
   ${({ theme }) => theme.mq.md} {
     grid-template-columns: repeat(4, 1fr);
@@ -56,7 +56,7 @@ const NewsletterLink = styled.a`
 `;
 
 const NewsletterParagraph = styled.p`
-  margin: 4px 0;
+  margin-bottom: 15px;
   display: flex;
   font-weight: ${({ theme }) => theme.font.weight.normal};
   font-size: ${({ theme }) => theme.font.size.xxs};
@@ -101,7 +101,7 @@ const renderListItems = (arr) => {
   return arr.map((element, index) => {
     return (
       <NewsletterListItem key={index}>
-        <NewsletterLink href='#'>{element}</NewsletterLink>
+        <NewsletterLink href="#">{element}</NewsletterLink>
       </NewsletterListItem>
     );
   });
@@ -133,14 +133,14 @@ const Newsletter = () => {
             the majority have suffered alteration in some form by injected.
           </NewsletterParagraph>
           <NewsletterParagraph>
-            <NewsletterLabel htmlFor='email'>
+            <NewsletterLabel htmlFor="email">
               <NewsletterInput
-                id='email'
-                name='email'
-                placeholder='Enter your email address'
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
               />
             </NewsletterLabel>
-            <NewsletterBtn placeholder='Click to subscribe'>
+            <NewsletterBtn placeholder="Click to subscribe">
               Subscribe
             </NewsletterBtn>
           </NewsletterParagraph>
