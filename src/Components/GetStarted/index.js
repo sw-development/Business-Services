@@ -66,7 +66,7 @@ const Input = styled.input`
 const Button = styled.button`
   border: none;
   outline: none;
-  background-color: #7ac8ff;
+  background-color: ${({ theme }) => theme.colors.lightBlue};
   border-radius: 15px;
   padding: 15px;
   color: #1956cf;
@@ -92,9 +92,10 @@ const GetStarted = () => {
       <Container>
         <GetStartedContent>
           <Title>Get Started Instantly</Title>
+
           <InputsWrapper>
-            <Input placeholder="Enter Your Email Address" />
-            <Button type="button">Request a quote</Button>
+            <Input placeholder='Enter Your Email Address' />
+            <Button type='button'>Request a quote</Button>
           </InputsWrapper>
         </GetStartedContent>
       </Container>

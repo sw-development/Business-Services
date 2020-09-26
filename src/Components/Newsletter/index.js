@@ -8,11 +8,12 @@ const Wrapper = styled.div`
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(4, 1fr);
   align-items: center;
-  padding: 100px 0;
+  padding: 40px 0;
 
   ${({ theme }) => theme.mq.md} {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
+    padding: 100px 0;
   }
 `;
 
@@ -48,6 +49,10 @@ const NewsletterListItem = styled.li`
   ${({ theme }) => theme.mq.md} {
     text-align: left;
   }
+`;
+
+const NewsletterLink = styled.a`
+  width: 100%;
 `;
 
 const NewsletterParagraph = styled.p`
@@ -92,40 +97,35 @@ const NewsletterBtn = styled.button`
   }
 `;
 
+const renderListItems = (arr) => {
+  return arr.map((element, index) => {
+    return (
+      <NewsletterListItem key={index}>
+        <NewsletterLink href='#'>{element}</NewsletterLink>
+      </NewsletterListItem>
+    );
+  });
+};
+
 const Newsletter = () => {
   return (
     <Container>
       <Wrapper>
         <NewsletterCard>
           <NewsletterHeader>Solution</NewsletterHeader>
-          <NewsletterList>
-            {solution.map((el) => (
-              <NewsletterListItem>
-                <a href="#">{el}</a>
-              </NewsletterListItem>
-            ))}
-          </NewsletterList>
+          <NewsletterList>{renderListItems(solution)}</NewsletterList>
         </NewsletterCard>
+
         <NewsletterCard>
           <NewsletterHeader>Company</NewsletterHeader>
-          <NewsletterList>
-            {company.map((el) => (
-              <NewsletterListItem>
-                <a href="#">{el}</a>
-              </NewsletterListItem>
-            ))}
-          </NewsletterList>
+          <NewsletterList>{renderListItems(company)}</NewsletterList>
         </NewsletterCard>
+
         <NewsletterCard>
           <NewsletterHeader>Products</NewsletterHeader>
-          <NewsletterList>
-            {products.map((el) => (
-              <NewsletterListItem>
-                <a href="#">{el}</a>
-              </NewsletterListItem>
-            ))}
-          </NewsletterList>
+          <NewsletterList>{renderListItems(products)}</NewsletterList>
         </NewsletterCard>
+
         <NewsletterCard>
           <NewsletterHeader>Stay Us</NewsletterHeader>
           <NewsletterParagraph>
@@ -133,14 +133,14 @@ const Newsletter = () => {
             the majority have suffered alteration in some form by injected.
           </NewsletterParagraph>
           <NewsletterParagraph>
-            <NewsletterLabel htmlFor="email">
+            <NewsletterLabel htmlFor='email'>
               <NewsletterInput
-                id="email"
-                name="email"
-                placeholder="Enter your email address"
+                id='email'
+                name='email'
+                placeholder='Enter your email address'
               />
             </NewsletterLabel>
-            <NewsletterBtn placeholder="Click to subscribe">
+            <NewsletterBtn placeholder='Click to subscribe'>
               Subscribe
             </NewsletterBtn>
           </NewsletterParagraph>
